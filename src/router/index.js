@@ -15,6 +15,16 @@ const router = new Router({
             component:resolve=>require(['@/views/index.vue'],resolve)
         },
         {
+          path: '/home',
+          name: 'home',
+          meta: {
+              title: '首页',
+              auth:false,//需要登录
+              keepAlive: false
+          },
+          component:resolve=>require(['@/views/home/index.vue'],resolve)
+      },
+        {
           path: '/test',
           name: 'test',
           meta: {
